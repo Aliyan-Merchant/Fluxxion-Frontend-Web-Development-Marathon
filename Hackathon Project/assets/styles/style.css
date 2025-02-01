@@ -1,0 +1,124 @@
+:root {
+    --bg-color: #f4f7fc;
+    --text-color: #2d3436;
+    --nav-bg: #00ffd0;
+    --btn-bg: #ff416c;
+    --btn-bg-hover: #ff4b2b;
+    --btn-text: #ffffff;
+    --footer-text: #333;
+}
+
+.dark-mode {
+    --bg-color: #2f3640;
+    --text-color: #ecf0f1;
+    --nav-bg: #7c2a82;
+    --btn-bg: #3498db;
+    --btn-bg-hover: #217dbb;
+    --btn-text: #ffffff;
+    --footer-text: #000000;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.5s ease;
+}
+
+.navbar {
+    background-color: var(--nav-bg) !important;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo {
+    height: 80px;
+}
+
+.cta-btn {
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--btn-text);
+    background: linear-gradient(45deg, var(--btn-bg), var(--btn-bg-hover));
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(255, 65, 108, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.6s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.cta-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cta-btn:hover {
+    background: linear-gradient(45deg, var(--btn-bg-hover), var(--btn-bg));
+    box-shadow: 0px 6px 20px rgba(255, 65, 108, 0.6);
+    transform: translateY(-2px);
+}
+
+.cta-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 10px rgba(255, 65, 108, 0.4);
+}
+
+footer {
+    padding: 10px 0;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    color: var(--footer-text);
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.parallax {
+    background-image: url('path/to/your/image.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

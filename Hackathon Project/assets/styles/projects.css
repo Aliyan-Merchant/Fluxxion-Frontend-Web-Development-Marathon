@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #f4f7fc;
+    --text-color: #2d3436;
+    --nav-bg: #00ffd0;
+    --btn-bg: #ff416c;
+    --btn-bg-hover: #ff4b2b;
+    --btn-text: #ffffff;
+    --footer-text: #333;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.3s;
+}
+
+.dark-mode {
+    --bg-color: #2f3640;
+    --text-color: #ecf0f1;
+    --nav-bg: #7c2a82;
+    --btn-bg: #3498db;
+    --btn-bg-hover: #217dbb;
+    --btn-text: #ffffff;
+    --footer-text: #000000;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition-speed) ease;
+}
+
+.navbar {
+    background-color: var(--nav-bg) !important;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition-speed) ease;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* Project Cards */
+.project-card {
+    cursor: pointer;
+    transition: transform var(--transition-speed) ease-in-out, 
+                box-shadow var(--transition-speed) ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px var(--shadow-color);
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--btn-text);
+    background: linear-gradient(45deg, var(--btn-bg), var(--btn-bg-hover));
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px var(--shadow-color);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.6s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.cta-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cta-btn:hover {
+    background: linear-gradient(45deg, var(--btn-bg-hover), var(--btn-bg));
+    box-shadow: 0px 6px 20px rgba(255, 65, 108, 0.6);
+    transform: translateY(-2px);
+}
+
+.cta-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 10px var(--shadow-color);
+}
+
+/* Footer */
+footer {
+    padding: 10px 0;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    color: var(--footer-text);
+}
+
+/* Animations */
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-slideUp {
+    animation: slideUp 0.8s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

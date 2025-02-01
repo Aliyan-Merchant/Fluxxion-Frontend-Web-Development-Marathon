@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Web Development Marathon</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/styles/services.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img id="logo" src="../assets/images/logo-light.jpg" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <button id="dark-mode-toggle" class="btn btn-sm me-3">🌙 Dark Mode</button>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Section -->
+    <section class="service-section text-center my-5">
+        <h2 class="animate__animated animate__fadeIn">Our Services</h2>
+        <div class="row justify-content-center">
+            <!-- Services -->
+            <div class="col-md-4 service-item animate__animated animate__animate__bounceInUp" data-bs-toggle="modal" data-bs-target="#webDevModal">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="../assets/images/webdevelopmentimg.png" alt="Web Development">
+                    </div>
+                    <h4>Web Development</h4>
+                    <p>Click to learn more about our web development services.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 service-item animate__animated animate__animate__bounceInUp" data-bs-toggle="modal" data-bs-target="#mobileAppModal">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="../assets/images/mobileappdevelopmentimg.png" alt="Mobile App">
+                    </div>
+                    <h4>Mobile Apps</h4>
+                    <p>Click to explore our mobile app solutions for iOS & Android.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 service-item animate__animated animate__animate__bounceInUp" data-bs-toggle="modal" data-bs-target="#aiSolutionsModal">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="../assets/images/AISolutionsimg.png" alt="AI Solutions">
+                    </div>
+                    <h4>AI Solutions</h4>
+                    <p>Click to discover how AI can transform your business.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 service-item animate__animated animate__animate__bounceInUp" data-bs-toggle="modal" data-bs-target="#uiUxDesignModal">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="../assets/images/uiuxdesignimg.png" alt="UI/UX Design">
+                    </div>
+                    <h4>UI/UX Design</h4>
+                    <p>Click to learn how our design enhances user experience.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 service-item animate__animated animate__animate__bounceInUp" data-bs-toggle="modal" data-bs-target="#seoServicesModal">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="../assets/images/SEOServicesimg.png" alt="SEO">
+                    </div>
+                    <h4>SEO Services</h4>
+                    <p>Click to enhance your website's search engine ranking.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 service-item animate__animated animate__animate__bounceInUp" data-bs-toggle="modal" data-bs-target="#ecommerceDevModal">
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="../assets/images/E-commerceDevelopmentimg.png" alt="E-commerce">
+                    </div>
+                    <h4>E-commerce Development</h4>
+                    <p>Click to learn how we build your online store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Services -->
+    <div id="modals">
+        <div class="modal fade" id="webDevModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Web Development Services</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>We specialize in building responsive, scalable, and feature-rich websites using the latest technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="mobileAppModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Mobile App Development</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>We create dynamic, user-friendly mobile apps that run seamlessly on iOS and Android platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="aiSolutionsModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>AI Solutions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Our AI solutions help you automate processes, enhance data analysis, and create smarter experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-4 text-center">
+        <p class="animate__animated animate__fadeInUp">&copy; 2025 Aliyan Merchant | Fluxxion Software Agency. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/scripts/services.js"></script>
+</body>
+
+</html>
